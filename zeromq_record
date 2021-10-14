@@ -1,1 +1,4 @@
 
+1: zeroMq的push模式是可以用connect;
+2: zeroMq的单Push对多个Pull来说，是可以做到负载均衡的。
+3：zeroMq的多个Push到单个Pull来说，是可以做到公平队列的。
