@@ -1,4 +1,14 @@
-
+# 模式
 1: zeroMq的push模式是可以用connect;
 2: zeroMq的单Push对多个Pull来说，是可以做到负载均衡的。
 3：zeroMq的多个Push到单个Pull来说，是可以做到公平队列的。
+
+#不同组合的协议
+ Req-Router ： 发送不仅仅是一个Message。是由3个Message组成。同时”多对一“模式会采用公平队列
+               模式。但是Req收到的消息只有一个Message。就是原始的数据。
+               
+Router-DEALER：两者之间的传输要传输3个Message
+DEALER-REQ: 要传输3个Message。但是REQ收到的信息，是原始的数据。REQ返回数据是直接Send元数据。
+            但是ZeroMq是要自动增加头部信息的。
+               
+             
