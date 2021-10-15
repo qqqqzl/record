@@ -10,5 +10,8 @@
 Router-DEALER：两者之间的传输要传输3个Message
 DEALER-REQ: 要传输3个Message。但是REQ收到的信息，是原始的数据。REQ返回数据是直接Send元数据。
             但是ZeroMq是要自动增加头部信息的。
+            
+ ##信封
+ 一般的信封只有Router可以解析，其他的都不行。要自己解析
                
              
