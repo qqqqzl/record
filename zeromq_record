@@ -13,5 +13,8 @@ DEALER-REQ: 要传输3个Message。但是REQ收到的信息，是原始的数据
             
  ##信封
  一般的信封只有Router可以解析，其他的都不行。要自己解析
+ 
+ ## REQ-ROUTER
+ REQ套接字发送给Router时，Router会受到3帧消息。 ID + “” + “Content”
                
              
